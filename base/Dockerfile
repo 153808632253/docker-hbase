@@ -1,8 +1,8 @@
-FROM openjdk:8
+FROM debian:10
 MAINTAINER Ivan Ermilov <ivan.s.ermilov@gmail.com>
 
 echo "deb http://archive.debian.org/debian stretch main contrib non-free" > /etc/apt/sources.list
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends net-tools curl netcat vim
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends net-tools curl netcat vim openjdk-8-jdk
 
 ENV HBASE_VERSION 1.2.6
 ENV HBASE_URL http://www.apache.org/dist/hbase/$HBASE_VERSION/hbase-$HBASE_VERSION-bin.tar.gz
