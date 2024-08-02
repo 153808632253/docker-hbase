@@ -1,4 +1,4 @@
-FROM debian:10
+FROM ubuntu:20.04
 MAINTAINER Ivan Ermilov <ivan.s.ermilov@gmail.com>
 
 echo "deb http://archive.debian.org/debian stretch main contrib non-free" > /etc/apt/sources.list
