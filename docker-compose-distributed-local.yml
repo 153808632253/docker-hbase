@@ -12,6 +12,7 @@ services:
       - ./hadoop.env
     ports:
       - 50070:50070
+      - 8020:8020
 
   datanode:
     image: bde2020/hadoop-datanode:2.0.0-hadoop2.7.4-java8
@@ -76,6 +77,7 @@ services:
       SERVICE_PRECONDITION: "namenode:50070 datanode:50075 zoo:2181"
     ports:
       - 16010:16010
+      - 16020:16020
 
   hbase-region:
     image: bde2020/hbase-regionserver:1.0.0-hbase1.2.6
